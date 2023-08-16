@@ -1,33 +1,60 @@
 package pkg_test
 
 import (
+	"fmt"
 	"testing"
 
+<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft/diff"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/cft/pkg"
+=======
+	"github.com/elishacatherasoo/rain/cft/diff"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/pkg"
+	"gopkg.in/yaml.v3"
+>>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 )
 
 func TestModule(t *testing.T) {
 
-	path := "../../test/modules/expect.yaml"
+	// There should be 3 files for each test, for example:
+	// bucket-module.yaml, bucket-template.yaml, bucket-expect.yaml
+	tests := []string{"test", "foreach"}
 
-	expectedTemplate, err := parse.File(path)
-	if err != nil {
-		t.Error(err)
-		return
+	for _, test := range tests {
+		path := fmt.Sprintf("./tmpl/%v-expect.yaml", test)
+
+		expectedTemplate, err := parse.File(path)
+		if err != nil {
+			t.Error(err)
+			return
+		}
+
+		pkg.Experimental = true
+
+		packaged, err := pkg.File(fmt.Sprintf("./tmpl/%v-template.yaml", test))
+		if err != nil {
+			t.Error(err)
+			return
+		}
+
+		d := diff.New(packaged, expectedTemplate)
+		if d.Mode() != "=" {
+			t.Errorf("Output does not match expected: %v", d.Format(true))
+		}
 	}
+}
 
-	pkg.Experimental = true
-
-	packaged, err := pkg.File("../../test/templates/module.yaml")
-	if err != nil {
-		t.Error(err)
-		return
+func TestCsvToSequence(t *testing.T) {
+	csv := "A,B,C"
+	seq := pkg.ConvertCsvToSequence(csv)
+	if seq == nil || seq.Kind != yaml.SequenceNode {
+		t.Errorf("expected a sequence node")
 	}
-
-	d := diff.New(packaged, expectedTemplate)
-	if d.Mode() != "=" {
-		t.Errorf("Output does not match expected: %v", d.Format(true))
+	if seq.Content[0].Value != "A" ||
+		seq.Content[1].Value != "B" ||
+		seq.Content[2].Value != "C" {
+		t.Errorf("Unexpected sequence")
 	}
 }

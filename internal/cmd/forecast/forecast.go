@@ -7,7 +7,9 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 
+<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/internal/aws/cfn"
@@ -17,6 +19,19 @@ import (
 	"github.com/elishacatherasoo/rain/internal/dc"
 	"github.com/elishacatherasoo/rain/internal/s11n"
 	"github.com/elishacatherasoo/rain/internal/ui"
+=======
+	"github.com/elishacatherasoo/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/internal/aws"
+	"github.com/elishacatherasoo/internal/aws/cfn"
+	"github.com/elishacatherasoo/internal/aws/iam"
+	"github.com/elishacatherasoo/internal/cmd/deploy"
+	"github.com/elishacatherasoo/internal/config"
+	"github.com/elishacatherasoo/internal/console/spinner"
+	"github.com/elishacatherasoo/internal/dc"
+	"github.com/elishacatherasoo/internal/s11n"
+	"github.com/elishacatherasoo/internal/ui"
+>>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 
@@ -44,6 +59,12 @@ var tags []string
 // The optional path to a file that contains params (--config)
 var configFilePath string
 
+type Env struct {
+	partition string
+	region    string
+	account   string
+}
+
 // Input to forecast prediction functions
 type PredictionInput struct {
 	source      cft.Template
@@ -54,6 +75,8 @@ type PredictionInput struct {
 	stack       types.Stack
 	typeName    string
 	dc          *dc.DeployConfig
+	env         Env
+	roleArn     string
 }
 
 // The current line number in the template
@@ -137,11 +160,10 @@ func forecastForType(input PredictionInput) Forecast {
 		forecast.Add(true, "Does not exist")
 	}
 
-	// Below are some ideas for things we might be able to check in a generic way
-
 	// Check permissions
-	// (see S3 example, we would need to figure out the arn for each service)
-	// TODO - Not sure if this is practical in a generic way
+	if !SkipIAM {
+		checkPermissions(input, &forecast)
+	}
 
 	// Check service quotas
 	// TODO - Can we do this in a generic way?
@@ -220,6 +242,20 @@ func predict(source cft.Template, stackName string, stack types.Stack, stackExis
 		input.stack = stack
 		input.typeName = typeName
 		input.dc = dc
+		cfg := aws.Config()
+		callerArn, err := iam.GetCallerArn(cfg) // arn:aws:iam::755952356119:role/Admin
+		if err != nil {
+			panic("unable to get caller arn")
+		}
+		arnTokens := strings.Split(callerArn, ":")
+		if len(arnTokens) != 6 {
+			panic(fmt.Sprintf("unexpected number of tokens in caller arn: %v", callerArn))
+		}
+		input.env = Env{partition: arnTokens[1], region: cfg.Region, account: arnTokens[4]}
+		input.roleArn = RoleArn
+		if input.roleArn == "" {
+			input.roleArn = callerArn
+		}
 
 		forecast.Append(forecastForType(input))
 	}
@@ -235,7 +271,7 @@ func predict(source cft.Template, stackName string, stack types.Stack, stackExis
 		}
 		return false
 	} else {
-		fmt.Println("Clear skies! 🌤  All", forecast.GetNumChecked(), "checks passed.")
+		fmt.Println("Clear skies! 🌞 All", forecast.GetNumChecked(), "checks passed.")
 		return true
 	}
 
@@ -274,7 +310,7 @@ Resource-specific checks:
 - S3 bucket policy has an invalid principal
 - (Many more to come...)
 `,
-	Args:                  cobra.ExactArgs(2),
+	Args:                  cobra.RangeArgs(1, 2),
 	DisableFlagsInUseLine: true,
 	Run: func(cmd *cobra.Command, args []string) {
 		fn := args[0]

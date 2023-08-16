@@ -8,9 +8,17 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/internal/node"
+=======
+	"github.com/elishacatherasoo/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/internal/config"
+	"github.com/elishacatherasoo/internal/node"
+	"github.com/elishacatherasoo/internal/s11n"
+>>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 	"gopkg.in/yaml.v3"
 )
 
@@ -70,7 +78,7 @@ func includeLiteral(n *yaml.Node, root string, t cft.Template, parent node.NodeP
 
 	// Transform
 	parse.TransformNode(&contentNode)
-	_, err = transform(&contentNode, filepath.Dir(path), t)
+	_, err = transform(&contentNode, filepath.Dir(path), t, nil)
 	if err != nil {
 		return false, err
 	}
@@ -140,6 +148,30 @@ func handleS3(root string, options s3Options) (*yaml.Node, error) {
 func includeS3Object(n *yaml.Node, root string, t cft.Template, parent node.NodePair) (bool, error) {
 	if n.Kind != yaml.MappingNode || len(n.Content) != 2 {
 		return false, errors.New("expected a map")
+	}
+
+	// Check to see if the Path is a Ref.
+	// The only valid use case is if the !Rain::S3 directive is inside a module,
+	// and the Ref points to one of the properties set in the parent template
+	_, pathOption := s11n.GetMapValue(n.Content[1], "Path")
+	if pathOption != nil && pathOption.Kind == yaml.MappingNode {
+		if pathOption.Content[0].Value == "Ref" {
+			if parent.Parent != nil {
+				moduleParentMap := parent.Parent.Value
+				_, moduleParentProps := s11n.GetMapValue(moduleParentMap, "Properties")
+				if moduleParentProps != nil {
+					_, pathProp := s11n.GetMapValue(moduleParentProps, pathOption.Content[1].Value)
+					if pathProp != nil {
+						// Replace the Ref with the value
+						node.SetMapValue(n.Content[1], "Path", node.Clone(pathProp))
+					} else {
+						config.Debugf("expected Properties to have Path")
+					}
+				} else {
+					config.Debugf("expected parent resource to have Properties")
+				}
+			}
+		}
 	}
 
 	// Parse the options
