@@ -4,16 +4,11 @@ import (
 	"fmt"
 
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation/types"
-<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/internal/aws/cfn"
 	"github.com/elishacatherasoo/rain/internal/aws/s3"
 	"github.com/elishacatherasoo/rain/internal/config"
 	"github.com/elishacatherasoo/rain/internal/console/spinner"
 	"github.com/elishacatherasoo/rain/internal/s11n"
-
-	"github.com/google/uuid"
-=======
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 )
 
 // An empty bucket cannot be deleted, which will cause a stack DELETE to fail.

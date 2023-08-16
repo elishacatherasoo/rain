@@ -408,13 +408,9 @@ Resources:
 
 ## Other CloudFormation tools
 
-<<<<<<< HEAD
 In alphabetical order:
 
 * [cfn-lint](https://github.com/elishacatherasoo/cfn-python-lint)
-=======
-* [cfn-lint](https://github.com/aws-cloudformation/cfn-python-lint)
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 
     Validate CloudFormation yaml/json templates against the CloudFormation spec and additional checks. Includes checking valid values for resource properties and best practices.
 

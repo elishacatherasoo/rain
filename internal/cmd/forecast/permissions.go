@@ -1,20 +1,9 @@
 package forecast
 
 import (
-<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/internal/aws/cfn"
 	"github.com/elishacatherasoo/rain/internal/aws/iam"
-	"github.com/elishacatherasoo/rain/internal/console/spinner"
-=======
-	"fmt"
-	"strings"
-
-	"github.com/elishacatherasoo/internal/aws/cfn"
-	"github.com/elishacatherasoo/internal/aws/iam"
-	"github.com/elishacatherasoo/internal/config"
-	"github.com/elishacatherasoo/internal/console/spinner"
-	"golang.org/x/exp/slices"
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
+	"github.com/elishacatherasoo/rain/internal/console/spinner"\
 )
 
 // Returns true if the user has the required permissions on the resource

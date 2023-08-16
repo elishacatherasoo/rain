@@ -4,21 +4,15 @@ package pkg
 import (
 	"errors"
 	"fmt"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/s11n"
 	"os"
 	"path/filepath"
 	"strings"
 
-<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/internal/node"
-=======
-	"github.com/elishacatherasoo/cft"
-	"github.com/elishacatherasoo/rain/cft/parse"
-	"github.com/elishacatherasoo/internal/config"
-	"github.com/elishacatherasoo/internal/node"
-	"github.com/elishacatherasoo/internal/s11n"
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 	"gopkg.in/yaml.v3"
 )
 

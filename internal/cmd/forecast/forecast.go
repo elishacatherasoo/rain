@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 	"strings"
 
-<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/internal/aws/cfn"
@@ -19,19 +18,6 @@ import (
 	"github.com/elishacatherasoo/rain/internal/dc"
 	"github.com/elishacatherasoo/rain/internal/s11n"
 	"github.com/elishacatherasoo/rain/internal/ui"
-=======
-	"github.com/elishacatherasoo/cft"
-	"github.com/elishacatherasoo/rain/cft/parse"
-	"github.com/elishacatherasoo/internal/aws"
-	"github.com/elishacatherasoo/internal/aws/cfn"
-	"github.com/elishacatherasoo/internal/aws/iam"
-	"github.com/elishacatherasoo/internal/cmd/deploy"
-	"github.com/elishacatherasoo/internal/config"
-	"github.com/elishacatherasoo/internal/console/spinner"
-	"github.com/elishacatherasoo/internal/dc"
-	"github.com/elishacatherasoo/internal/s11n"
-	"github.com/elishacatherasoo/internal/ui"
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 

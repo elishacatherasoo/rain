@@ -2,18 +2,12 @@ package pkg_test
 
 import (
 	"fmt"
+	"gopkg.in/yaml.v3"
 	"testing"
 
-<<<<<<< HEAD
 	"github.com/elishacatherasoo/rain/cft/diff"
 	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/elishacatherasoo/rain/cft/pkg"
-=======
-	"github.com/elishacatherasoo/rain/cft/diff"
-	"github.com/elishacatherasoo/rain/cft/parse"
-	"github.com/elishacatherasoo/rain/cft/pkg"
-	"gopkg.in/yaml.v3"
->>>>>>> dc263250e243a88b2940dc5416a65e8c8f936f90
 )
 
 func TestModule(t *testing.T) {
