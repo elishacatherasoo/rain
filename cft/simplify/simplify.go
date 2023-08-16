@@ -5,7 +5,7 @@ package simplify
 import (
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft"
+	"github.com/elishacatherasoo/rain/cft"
 	"gopkg.in/yaml.v3"
 )
 
@@ -70,7 +70,7 @@ func String(t cft.Template, opt Options) string {
 		isMultiline := false
 		if startMultilineIndent > -1 {
 			// Note: len(part) == 0 means empty line without indentation
-			// https://github.com/aws-cloudformation/rain/issues/126
+			// https://github.com/elishacatherasoo/rain/issues/126
 			if indent <= startMultilineIndent && len(part) != 0 {
 				startMultilineIndent = -1
 			} else {

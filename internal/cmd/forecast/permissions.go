@@ -1,9 +1,9 @@
 package forecast
 
 import (
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/aws/iam"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/aws/iam"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
 )
 
 // Returns true if the user has the required permissions on the resource

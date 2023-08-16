@@ -3,7 +3,7 @@ package logs
 import (
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/internal/ui"
 
 	"github.com/spf13/cobra"
 )

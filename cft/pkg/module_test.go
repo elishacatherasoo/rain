@@ -3,9 +3,9 @@ package pkg_test
 import (
 	"testing"
 
-	"github.com/aws-cloudformation/rain/cft/diff"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/cft/pkg"
+	"github.com/elishacatherasoo/rain/cft/diff"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/pkg"
 )
 
 func TestModule(t *testing.T) {

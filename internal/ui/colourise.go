@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft/diff"
-	"github.com/aws-cloudformation/rain/internal/console"
+	"github.com/elishacatherasoo/rain/cft/diff"
+	"github.com/elishacatherasoo/rain/internal/console"
 )
 
 type statusCategory int

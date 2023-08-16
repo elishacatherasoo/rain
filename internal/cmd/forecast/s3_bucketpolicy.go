@@ -3,11 +3,11 @@ package forecast
 import (
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/aws/iam"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
-	"github.com/aws-cloudformation/rain/internal/s11n"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/aws/iam"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/s11n"
 )
 
 // Check everything that could go wrong with an AWS::S3::Bucket resource.

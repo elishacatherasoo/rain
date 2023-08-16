@@ -3,7 +3,7 @@ package node_test
 import (
 	"testing"
 
-	"github.com/aws-cloudformation/rain/internal/node"
+	"github.com/elishacatherasoo/rain/internal/node"
 	"gopkg.in/yaml.v3"
 )
 

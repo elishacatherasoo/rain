@@ -1,9 +1,9 @@
-[![Unit tests](https://github.com/aws-cloudformation/rain/actions/workflows/test.yml/badge.svg)](https://github.com/aws-cloudformation/rain/actions/workflows/test.yml)
-[![Mentioned in Awesome CloudFormation](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/aws-cloudformation/awesome-cloudformation)
+[![Unit tests](https://github.com/elishacatherasoo/rain/actions/workflows/test.yml/badge.svg)](https://github.com/elishacatherasoo/rain/actions/workflows/test.yml)
+[![Mentioned in Awesome CloudFormation](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/elishacatherasoo/awesome-cloudformation)
 
 # Rain
 
-* Documentation: <https://aws-cloudformation.github.io/rain/>
+* Documentation: <https://elishacatherasoo.github.io/rain/>
 
 > Rain is what happens when you have a lot of CloudFormation
 
@@ -41,9 +41,9 @@ _Note that in order to use experimental commands, you have to add `--experimenta
 
 If you have [homebrew](https://brew.sh/) installed, `brew install rain`
 
-Or you can download the appropriate binary for your system from [the releases page](https://github.com/aws-cloudformation/rain/releases).
+Or you can download the appropriate binary for your system from [the releases page](https://github.com/elishacatherasoo/rain/releases).
 
-Or if you're a [Gopher](https://blog.golang.org/gopher), you can `GO111MODULE=on go install github.com/aws-cloudformation/rain/cmd/rain`
+Or if you're a [Gopher](https://blog.golang.org/gopher), you can `GO111MODULE=on go install github.com/elishacatherasoo/rain/cmd/rain`
 
 ```
 Usage:
@@ -80,7 +80,7 @@ You can find shell completion scripts in [docs/bash_completion.sh](./docs/bash_c
 
 Rain is written in [Go](https://golang.org/) and uses the [AWS SDK for Go v2](https://github.com/aws/aws-sdk-go-v2).
 
-To contribute a change to Rain, [fork this repository](https://github.com/aws-cloudformation/rain/fork), make your changes, and submit a Pull Request.
+To contribute a change to Rain, [fork this repository](https://github.com/elishacatherasoo/rain/fork), make your changes, and submit a Pull Request.
 
 ### Go Generate
 
@@ -88,7 +88,7 @@ The `README.md`, documentation in `docs/`, the auto completion scripts and a cop
 
 ## License
 
-Rain is licensed under the Apache 2.0 License. 
+Rain is licensed under the Apache 2.0 License.
 
 ---
 
@@ -96,7 +96,7 @@ Rain is licensed under the Apache 2.0 License.
 
 In alphabetical order:
 
-* [cfn-lint](https://github.com/aws-cloudformation/cfn-python-lint)
+* [cfn-lint](https://github.com/elishacatherasoo/cfn-python-lint)
 
     Validate CloudFormation yaml/json templates against the CloudFormation spec and additional checks. Includes checking valid values for resource properties and best practices.
 

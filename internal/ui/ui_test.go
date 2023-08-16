@@ -7,9 +7,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/aws-cloudformation/rain/cft/diff"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/internal/console"
+	"github.com/elishacatherasoo/rain/cft/diff"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/internal/console"
 )
 
 func TestColouriseStatus(t *testing.T) {

@@ -15,8 +15,8 @@
 package main
 
 import (
-	"github.com/aws-cloudformation/rain/internal/cmd"
-	"github.com/aws-cloudformation/rain/internal/cmd/build"
+	"github.com/elishacatherasoo/rain/internal/cmd"
+	"github.com/elishacatherasoo/rain/internal/cmd/build"
 )
 
 func main() {

@@ -1,10 +1,10 @@
 package simplify_test
 
 import (
-	"github.com/aws-cloudformation/rain/cft/simplify"
+	"github.com/elishacatherasoo/rain/cft/simplify"
 	"testing"
 
-	"github.com/aws-cloudformation/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/google/go-cmp/cmp"
 )
 

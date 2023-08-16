@@ -3,9 +3,9 @@ package ccapi
 import (
 	"context"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/config"
 	"github.com/aws/aws-sdk-go-v2/service/cloudcontrol"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/config"
 )
 
 func getClient() *cloudcontrol.Client {

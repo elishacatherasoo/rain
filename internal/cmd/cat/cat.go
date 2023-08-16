@@ -3,12 +3,12 @@ package cat
 import (
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/internal/ui"
 
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
 	"github.com/spf13/cobra"
 )
 

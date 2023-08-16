@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/aws/sts"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/aws/sts"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/ui"
 
 	"github.com/spf13/cobra"
 )

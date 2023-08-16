@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console"
 )
 
 // Debug defines whether debug mode is enabled

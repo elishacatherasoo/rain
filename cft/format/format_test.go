@@ -3,8 +3,8 @@ package format_test
 import (
 	"testing"
 
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/google/go-cmp/cmp"
 )
 
@@ -42,7 +42,7 @@ Resources:
         ZipFile: |
           import boto3
 
-          def handler: 
+          def handler:
             """Example."""
 
             print('hello')

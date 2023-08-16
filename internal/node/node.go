@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/config"
 	"gopkg.in/yaml.v3"
 )
 

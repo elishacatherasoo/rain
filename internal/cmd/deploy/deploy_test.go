@@ -3,7 +3,7 @@ package deploy_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/deploy"
+	"github.com/elishacatherasoo/rain/internal/cmd/deploy"
 )
 
 func Example_deploy_help() {

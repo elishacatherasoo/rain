@@ -3,7 +3,7 @@ package dc_test
 import (
 	"testing"
 
-	"github.com/aws-cloudformation/rain/internal/dc"
+	"github.com/elishacatherasoo/rain/internal/dc"
 	"github.com/google/go-cmp/cmp"
 )
 

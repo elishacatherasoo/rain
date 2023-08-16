@@ -10,13 +10,13 @@ import (
 	"github.com/google/uuid"
 	"gopkg.in/yaml.v3"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/dc"
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation"
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation/types"
 	"github.com/aws/smithy-go/ptr"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/dc"
 )
 
 const WAIT_PERIOD_IN_SECONDS = 2

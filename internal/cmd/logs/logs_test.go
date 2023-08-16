@@ -3,7 +3,7 @@ package logs_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/logs"
+	"github.com/elishacatherasoo/rain/internal/cmd/logs"
 )
 
 func Example_logs_help() {

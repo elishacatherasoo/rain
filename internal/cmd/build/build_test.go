@@ -3,7 +3,7 @@ package build_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/build"
+	"github.com/elishacatherasoo/rain/internal/cmd/build"
 )
 
 func Example_build_bucket() {

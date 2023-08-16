@@ -3,7 +3,7 @@ package simplify_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/simplify"
+	"github.com/elishacatherasoo/rain/internal/cmd/simplify"
 )
 
 func Example_simplify_foreach() {

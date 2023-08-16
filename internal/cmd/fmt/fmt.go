@@ -6,12 +6,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/ui"
 
-	"github.com/aws-cloudformation/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/parse"
 	"github.com/spf13/cobra"
 )
 

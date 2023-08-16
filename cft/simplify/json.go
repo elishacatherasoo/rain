@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/ake-persson/mapslice-json"
-	"github.com/aws-cloudformation/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/parse"
 	"gopkg.in/yaml.v3"
 )
 

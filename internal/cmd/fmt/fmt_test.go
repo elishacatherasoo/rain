@@ -3,7 +3,7 @@ package fmt_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/fmt"
+	"github.com/elishacatherasoo/rain/internal/cmd/fmt"
 )
 
 func Example_fmt_help() {

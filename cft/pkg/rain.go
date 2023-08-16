@@ -2,15 +2,15 @@
 package pkg
 
 import (
-	"os"
 	"errors"
 	"fmt"
+	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/internal/node"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/internal/node"
 	"gopkg.in/yaml.v3"
 )
 
@@ -85,12 +85,12 @@ func includeEnv(n *yaml.Node, root string, t cft.Template, parent node.NodePair)
 	if err != nil {
 		return false, err
 	}
-	val, present := os.LookupEnv( name )
+	val, present := os.LookupEnv(name)
 	if !present {
 		return false, fmt.Errorf("missing environmental variable %q", name)
 	}
 	var newNode yaml.Node
-	newNode.Encode ( val )
+	newNode.Encode(val)
 	if err != nil {
 		return false, err
 	}

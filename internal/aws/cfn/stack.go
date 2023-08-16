@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
-	"github.com/aws-cloudformation/rain/internal/ui"
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation/types"
 	"github.com/aws/smithy-go/ptr"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/ui"
 )
 
 func StatusIsSettled(status string) bool {

@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
-	"github.com/aws-cloudformation/rain/internal/dc"
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/dc"
+	"github.com/elishacatherasoo/rain/internal/ui"
 
 	"github.com/spf13/cobra"
 )

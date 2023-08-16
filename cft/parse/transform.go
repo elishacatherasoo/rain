@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/internal/node"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/internal/node"
 	"gopkg.in/yaml.v3"
 )
 

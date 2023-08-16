@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/config"
 )
 
 var BucketName = ""
@@ -33,7 +33,7 @@ func Upload(bucketName string, content []byte) (string, error) {
 	if !isBucketExists {
 		return "", fmt.Errorf("bucket does not exist: '%s'", bucketName)
 	}
-	return filepath.Join ( BucketKeyPrefix, fmt.Sprintf("%x", sha256.Sum256(content)) ), nil
+	return filepath.Join(BucketKeyPrefix, fmt.Sprintf("%x", sha256.Sum256(content))), nil
 }
 
 // RainBucket returns the name of the rain deployment bucket in the current region

@@ -3,7 +3,7 @@ package rm_test
 import (
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/cmd/rm"
+	"github.com/elishacatherasoo/rain/internal/cmd/rm"
 )
 
 func Example_rm_help() {

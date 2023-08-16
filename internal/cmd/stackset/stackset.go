@@ -1,8 +1,8 @@
 package stackset
 
 import (
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console"
 	"github.com/spf13/cobra"
 )
 

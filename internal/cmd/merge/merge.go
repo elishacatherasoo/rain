@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/internal/ui"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/internal/ui"
 	"github.com/spf13/cobra"
 )
 

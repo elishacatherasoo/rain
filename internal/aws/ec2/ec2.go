@@ -6,8 +6,8 @@ import (
 	"context"
 	"sort"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
+	"github.com/elishacatherasoo/rain/internal/aws"
 )
 
 func getClient() *ec2.Client {

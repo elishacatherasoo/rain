@@ -27,11 +27,11 @@ package pkg
 import (
 	"path/filepath"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/node"
-	"github.com/aws-cloudformation/rain/internal/s11n"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/node"
+	"github.com/elishacatherasoo/rain/internal/s11n"
 	"gopkg.in/yaml.v3"
 )
 

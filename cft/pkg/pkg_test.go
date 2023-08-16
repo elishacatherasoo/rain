@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/parse"
-	"github.com/aws-cloudformation/rain/cft/pkg"
-	"github.com/aws-cloudformation/rain/internal/s11n"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft/pkg"
+	"github.com/elishacatherasoo/rain/internal/s11n"
 	"github.com/google/go-cmp/cmp"
 )
 

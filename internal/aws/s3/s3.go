@@ -14,15 +14,15 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
 	"github.com/aws/smithy-go/ptr"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/aws/sts"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/aws/sts"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
 )
 
 var BucketName = ""
-var BucketKeyPrefix = "" 
+var BucketKeyPrefix = ""
 
 func getClient() *s3.Client {
 	return s3.NewFromConfig(aws.Config())
@@ -150,7 +150,7 @@ func Upload(bucketName string, content []byte) (string, error) {
 		return "", fmt.Errorf("bucket does not exist: '%s'", bucketName)
 	}
 
-	key := filepath.Join ( BucketKeyPrefix, fmt.Sprintf("%x", sha256.Sum256(content)) )
+	key := filepath.Join(BucketKeyPrefix, fmt.Sprintf("%x", sha256.Sum256(content)))
 
 	_, err := getClient().PutObject(context.Background(), &s3.PutObjectInput{
 		Bucket: ptr.String(bucketName),

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/spec"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/spec"
 )
 
 const (

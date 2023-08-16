@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
 	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
 )
 
 var awsCfg *aws.Config

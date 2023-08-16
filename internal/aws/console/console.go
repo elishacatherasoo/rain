@@ -10,15 +10,15 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/internal/aws"
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/aws/sts"
-	"github.com/aws-cloudformation/rain/internal/config"
 	"github.com/aws/smithy-go/ptr"
+	"github.com/elishacatherasoo/rain/internal/aws"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/aws/sts"
+	"github.com/elishacatherasoo/rain/internal/config"
 )
 
 const signinURI = "https://signin.aws.amazon.com/federation"
-const issuer = "https://aws-cloudformation.github.io/rain/rain_console.html"
+const issuer = "https://elishacatherasoo.github.io/rain/rain_console.html"
 const consoleURI = "https://console.aws.amazon.com"
 const defaultService = "cloudformation"
 const sessionDuration = 43200

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/aws-cloudformation/rain/cft/build"
-	"github.com/aws-cloudformation/rain/cft/spec"
+	"github.com/elishacatherasoo/rain/cft/build"
+	"github.com/elishacatherasoo/rain/cft/spec"
 )
 
 var allResourceTypes map[string]string

@@ -12,7 +12,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft/spec"
+	"github.com/elishacatherasoo/rain/cft/spec"
 
 	"gopkg.in/yaml.v3"
 )

@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"github.com/aws-cloudformation/rain/internal/aws/s3"
+	"github.com/elishacatherasoo/rain/internal/aws/s3"
 	"github.com/spf13/cobra"
 )
 

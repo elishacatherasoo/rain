@@ -6,17 +6,17 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/internal/aws/cfn"
-	"github.com/aws-cloudformation/rain/internal/cmd/deploy"
-	"github.com/aws-cloudformation/rain/internal/config"
-	"github.com/aws-cloudformation/rain/internal/console"
-	"github.com/aws-cloudformation/rain/internal/console/spinner"
-	"github.com/aws-cloudformation/rain/internal/dc"
-	"github.com/aws-cloudformation/rain/internal/ui"
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation/types"
 	"github.com/aws/smithy-go/ptr"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/internal/aws/cfn"
+	"github.com/elishacatherasoo/rain/internal/cmd/deploy"
+	"github.com/elishacatherasoo/rain/internal/config"
+	"github.com/elishacatherasoo/rain/internal/console"
+	"github.com/elishacatherasoo/rain/internal/console/spinner"
+	"github.com/elishacatherasoo/rain/internal/dc"
+	"github.com/elishacatherasoo/rain/internal/ui"
 	"golang.org/x/exp/constraints"
 	"gopkg.in/yaml.v3"
 
@@ -70,7 +70,7 @@ StackSetInstanses:
 		- us-east-2
 ...
 
-Account(s) and region(s) provideed as flags OVERRIDE values from configuration files. Tags and parameters from the configuration file are MERGED with CLI flag values. 
+Account(s) and region(s) provideed as flags OVERRIDE values from configuration files. Tags and parameters from the configuration file are MERGED with CLI flag values.
 `,
 	Args:                  cobra.RangeArgs(1, 2),
 	DisableFlagsInUseLine: false,

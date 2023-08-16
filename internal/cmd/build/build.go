@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft/build"
-	"github.com/aws-cloudformation/rain/cft/format"
-	"github.com/aws-cloudformation/rain/cft/spec"
+	"github.com/elishacatherasoo/rain/cft/build"
+	"github.com/elishacatherasoo/rain/cft/format"
+	"github.com/elishacatherasoo/rain/cft/spec"
 	"github.com/spf13/cobra"
 )
 

@@ -3,8 +3,8 @@ package merge
 import (
 	"fmt"
 
-	"github.com/aws-cloudformation/rain/cft"
-	"github.com/aws-cloudformation/rain/cft/parse"
+	"github.com/elishacatherasoo/rain/cft"
+	"github.com/elishacatherasoo/rain/cft/parse"
 )
 
 func checkMerge(name string, dst, src map[string]interface{}) error {

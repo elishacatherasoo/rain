@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/aws-cloudformation/rain/cft/spec"
+	"github.com/elishacatherasoo/rain/cft/spec"
 )
 
 func resolveType(suffix string) string {
